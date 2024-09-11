@@ -1,0 +1,12 @@
+SELECT  
+  Date,
+  Region,
+  Small_Bags,
+  Large_Bags,
+  XLarge_Bags,
+  Total_Bags,
+  Small_Bags + Large_Bags + XLarge_Bags AS Total_Bags_Calc,
+  (Small_Bags / Total_Bags) *100 AS Percentage_of_S_Bags
+FROM `sound-yew-380917.avocado_data.avocado_prices`
+WHERE 
+  Total_Bags <> 0
